@@ -1,3 +1,4 @@
+require 'pry-byebug'
 
 # WARMUP 🏃
 
@@ -29,13 +30,13 @@ end
 
 # WORKOUT 🏋
 
-def union(arr, other_arr)
+def join_values(arr, other_arr)
   # gets all common values in two arrays (ex.)
   # merge_arrays(["a", "b", "c"], ["c", "z", "y"])
   # => ["c"]
 end
 
-def non_union(arr, other_arr)
+def excluded_values(arr, other_arr)
   # gets all non-shared values in two arrays (ex.)
   # merge_arrays(["a", "b", "c"], ["c", "z", "y"])
   # => ["a", "b", "z", "y"]
@@ -65,9 +66,10 @@ def acronym(arr)
 end
 
 def stop_sign(arr)
-  # given an array of words, give all values until you find the word "STOP"
+  # given an array of words, take all values until you find the word "STOP"
   # (ex.)
-  # stop_sign([""])
+  # stop_sign(["Hi", "my", "name", "is", "STOP", "Slim", "Shady"])
+  # => ["Hi", "my", "name", "is"]
 end
 
 
