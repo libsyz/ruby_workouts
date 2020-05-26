@@ -1,22 +1,26 @@
 
 # WARMUP 🏃
+# You can find all these as core documentation methods
 
 def to_array(a_hash)
   # transforms a hash into an array
   # to_array({ banana: "yummy fruit"})
   # => [[:banana, "yummy fruit"]]
+  a_hash.to_a
 end
 
 def reverse(a_hash)
   # keys become values, values become keys
   # reverse({ banana: "yummy fruit"})
   # => {"yummy fruit" => :banana}
+  a_hash.invert
 end
 
 def no_nil_values(a_hash)
-  # delete all nil values from a_hash
+  # delete all nil pairs with nil values from a_hash
   # no_nil_values({ banana: 33, pear: nil})
   # => {"banana" => 33}
+  a_hash.compact
 end
 
 def subset?(a_hash, another_hash)
@@ -24,6 +28,7 @@ def subset?(a_hash, another_hash)
   # otherwise return false
   # subset?({ banana: 33 }, { banana: 33, pear: nil})
   # => true
+  a_hash < another_hash
 end
 
 
@@ -35,9 +40,13 @@ def stringify(a_hash)
   # into strings
   # stringify({ banana: 33})
   # => { "banana" => "33"}
+  a_hash.transform_keys { |k| k.to_s}.transform_values {|v| v.to_s }
 end
 
-def word_counter(a_hash)
+def simple_word_counter(a_string)
+  a_string.split.each_with_object({}) do |el, obj|
+    obj[el].nil? ? obj[el] = 1 : obj[el] += 1
+  end
   # count the number of words in a string
   # all words separated by spaces
   # word_counter(The Ruby Programming Language")
@@ -56,20 +65,20 @@ def find_with_warning(a_hash, a_key)
   # find_with_warning({ banana: 33}, :pear)
   # => "not found"
   # Look up the documentation, there's no need for an if statement!
-end
-
-def json_to_hash(a_string)
-  # transform a json string into a ruby hash
-  # Don't use the json library!
-  # json_to_hash("{ banana: 33}"")
-  # { "banana" => "33"}
+  a_hash.fetch(a_key) { "not found" }
 end
 
 def destroy(a_hash, an_array)
+  a_hash.keep_if do |k, v|
+    !an_array.include?(v)
+  end
   # destroy all pairs which values are included in an_array
-  # json_to_hash("{ banana: 33, pear: 12}", [12])
+  # destroy({ banana: 33, pear: 12}, [12])
   # { "banana" => "33"}
 end
+
+
+
 
 
 
