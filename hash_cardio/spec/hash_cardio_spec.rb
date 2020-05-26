@@ -68,5 +68,4 @@ context 'Hash Cardio' do
       expect(result).to eq({ banana: 33 })
     end
   end
-
 end
