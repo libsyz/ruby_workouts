@@ -22,7 +22,7 @@ guardrails, but they are not exhaustive.
 
 ### About
 
-- clone the repository
+- `git clone` the repository
 - go to the folder with the exercises you wish to practice
-- run bundle install
-- type rspec in the terminals and start working through the tests
+- run `bundle install`in your terminal
+- type `rspec` in the terminal and start working through the tests
