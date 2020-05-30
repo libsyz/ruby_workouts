@@ -32,7 +32,7 @@ end
 
 def join_values(arr, other_arr)
   # gets all common values in two arrays (ex.)
-  # merge_arrays(["a", "b", "c"], ["c", "z", "y"])
+  # join_values(["a", "b", "c"], ["c", "z", "y"])
   # => ["c"]
 end
 
@@ -67,7 +67,6 @@ end
 
 def stop_sign(arr)
   # given an array of words, take all values until you find the word "STOP"
-  # (ex.)
   # stop_sign(["Hi", "my", "name", "is", "STOP", "Slim", "Shady"])
   # => ["Hi", "my", "name", "is"]
 end
