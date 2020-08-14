@@ -17,7 +17,7 @@ The purpose of the exercises are to:
 - Become faster at doing frequent manipulations with core data structures.
 
 Therefore, most exercises can be solved with 1-2 lines of code. These are not
-katas to help you refine your thinking. The test cases are there to provide
+katas to stretch your algorithmic thinking, but exercises to help you internalize Ruby fundamentals. The test cases are there to provide
 guardrails, but they are not exhaustive.
 
 ### About
